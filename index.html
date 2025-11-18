@@ -3,199 +3,833 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="uF9g28rjFPiYXHrzmncUsg48Y0rWamsVPniv777PYQE" />
-    <meta name="description" content="Get custom blinds at Gallery Shutters in San Bernardino, CA. Choose cordless, motorized, or stylish designs with fast delivery and affordable prices.">
-    <meta name="keywords" content="custom blinds, San Bernardino blinds, window blinds, cordless blinds, Gallery Shutters">
-    <meta name="author" content="Gallery Shutters">
-    <title>Custom Blinds in San Bernardino, CA | Gallery Shutters</title>
+    <title>Gallery Shutters | Premium Window Shutters & Blinds in San Bernardino, CA</title>
+    <meta name="description" content="Gallery Shutters in San Bernardino, CA offers custom interior shutters, window blinds, and door shutters. Browse our online presence and expert resources.">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Color Scheme Derived from Logo (Asset-11.png) */
+        :root {
+            --color-navy: #1a2b4a;  /* Primary: Deep Navy from logo background */
+            --color-cream: #f5f1e6; /* Secondary: Warm Cream from text/accents */
+            --color-gold: #c9a96e;  /* Accent: Warm Gold from highlights */
+            --color-dark: #333333;
+            --color-light: #ffffff;
+        }
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-light);
+            color: var(--color-dark);
             line-height: 1.6;
-            color: #333;
         }
-        header, section, footer {
-            padding: 40px;
-            text-align: center;
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
         }
-        h1, h2, h3 {
-            color: #7f1d1d; /* Deep red for headers */
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--color-light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        a {
-            color: #dc2626; /* Bright red for links */
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            max-height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
             text-decoration: none;
+            color: var(--color-navy);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
-        a:hover {
-            text-decoration: underline;
+
+        nav a:hover {
+            color: var(--color-gold);
         }
+
         /* Hero Section */
-        #hero {
-            background-image: url('https://i0.wp.com/galleryshuttersinc.com/wp-content/uploads/2024/06/Blinds.jpg?w=750&ssl=1'); /* New blinds-themed background */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 43, 74, 0.9) 0%, rgba(44, 62, 90, 0.9) 100%), url('https://galleryshuttersinc.com/wp-content/uploads/2024/06/shutter-image-1-1024x768.jpg');
             background-size: cover;
             background-position: center;
-            color: #fff; /* White text for contrast */
-            padding: 80px 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+            background-attachment: fixed;
+            color: var(--color-light);
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
         }
-        #hero h1 {
-            font-size: 2.5em;
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
-        /* About Blinds Section */
-        #about-blinds {
-            background-color: #fee2e2; /* Light red */
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        /* Types of Blinds Section */
-        #blinds-types {
-            background-color: #fecaca; /* Medium light red */
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0 auto 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
-        /* Benefits Section */
-        #benefits {
-            background-color: #f87171; /* Medium red */
-            color: #fff;
-        }
-        /* Why Choose Us Section */
-        #why-choose {
-            background-color: #ef4444; /* Vibrant red */
-            color: #fff;
-        }
-        /* Locations Section */
-        #locations {
-            background-color: #dc2626; /* Darker red */
-            color: #fff;
-        }
-        /* Map Section */
-        #map {
-            background-color: #f5f5f5; /* Light gray */
-        }
-        /* Contact Section */
-        #contact {
-            background-color: #b91c1c; /* Deep red */
-            color: #fff;
-        }
-        /* Copyright Section */
-        #copyright {
-            background-color: #7f1d1d; /* Dark red */
-            color: #fff;
-            padding: 20px;
-        }
-        .button {
-            background-color: #dc2626; /* Bright red button */
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
+
+        .cta-button {
             display: inline-block;
-            margin-top: 20px;
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
         }
+
+        .cta-button:hover {
+            background-color: var(--color-cream);
+            transform: translateY(-2px);
+        }
+
+        /* Sections Styling */
+        section {
+            padding: 70px 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--color-cream);
+        }
+
+        h2 {
+            color: var(--color-navy);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        h3 {
+            color: var(--color-navy);
+            margin-bottom: 15px;
+        }
+
+        /* About & Services */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .services-list li:before {
+            content: '✓';
+            color: var(--color-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Citations */
+        .citations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .citation-item {
+            background-color: var(--color-light);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .citation-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .citation-item a {
+            color: var(--color-navy);
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+
+        .citation-item a:hover {
+            color: var(--color-gold);
+            text-decoration: underline;
+        }
+
+        .citation-platform {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--color-gold);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card-content {
+            padding: 25px;
+        }
+
+        .blog-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .blog-card a {
+            color: var(--color-navy);
+            text-decoration: none;
+        }
+
+        .blog-card a:hover {
+            color: var(--color-gold);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--color-gold);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-navy);
+            color: var(--color-light);
+            padding: 50px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            max-height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact a {
+            color: var(--color-cream);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--color-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-navy);
+            cursor: pointer;
+        }
+
+        /* Enhanced Mobile Responsiveness */
         @media (max-width: 768px) {
-            header, section, footer {
-                padding: 20px;
+            .header-container {
+                flex-direction: column;
+                text-align: center;
             }
-            #hero h1 {
-                font-size: 1.8em;
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            nav {
+                width: 100%;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .hero {
+                padding: 80px 0;
+                background-attachment: scroll;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .blog-grid, .citations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .container {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            .citation-item, .blog-card-content {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="https://galleryshuttersinc.com/">
+                <img src="https://galleryshuttersinc.com/wp-content/uploads/2024/06/Asset-11.png" alt="Gallery Shutters - Premium Window Treatments" class="logo">
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#citations">Our Profiles</a></li>
+                    <li><a href="#blog">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section id="hero">
-        <h1>Transform Your Home with Custom Blinds in San Bernardino</h1>
-        <p>Want your windows to look stylish and keep your home comfy? Gallery Shutters in San Bernardino, CA, makes custom blinds that fit your home perfectly. From cordless to motorized designs, we’ve got it all! Call us at (800) 462-8777 for a free estimate.</p>
-        <a href="#contact" class="button">Get Your Free Quote Now</a>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Custom Window Shutters & Blinds in San Bernardino</h1>
+            <p>Gallery Shutters adds a touch of elegance and practical comfort to your home with premium, custom crafted interior shutters and window treatments. Every piece is made with care to match your style, improve light control, and elevate the look of each room. We proudly serve San Bernardino, CA with quality craftsmanship, personal guidance, and dependable service from start to finish.</p>
+            <a href="tel:9097961788" class="cta-button">Call for a Free Quote</a>
+        </div>
     </section>
 
-    <!-- About Blinds Section -->
-    <section id="about-blinds">
-        <h2>What Are Custom Blinds?</h2>
-        <p>Blinds are window covers that make your home look great and control light and privacy. Unlike regular blinds from a store, our <a href="https://galleryshuttersinc.com/blinds/">custom window blinds</a> at Gallery Shutters are made just for your windows. We’ve been crafting them in our Inland Empire factory since 1994, using top-quality materials to ensure they last for years.</p>
-        <p>Our team, led by owner Tim McNulty, has over 30 years of experience. We help San Bernardino homeowners choose blinds that match their style, whether it’s modern, cozy, or unique. With options like cordless and motorized blinds, we make your home feel special and easy to use.</p>
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Gallery Shutters</h2>
+            <div class="about-content">
+                <div>
+                    <p>For years, <strong>Gallery Shutters</strong>, under the leadership of <strong>Tim McNulty</strong>, has been the trusted name for <strong>custom window coverings</strong> in San Bernardino and the Inland Empire. We specialize in transforming homes and offices with high-quality, durable, and beautiful window solutions.</p>
+                    <p>Our commitment is to provide not just a product, but a seamless experience—from expert consultation and precise measurement to professional installation and lasting customer service.</p>
+                </div>
+                <div>
+                    <h3>Why Choose Us?</h3>
+                    <ul class="services-list">
+                        <li>Expert Craftsmanship & Precision Installation</li>
+                        <li>Wide Range of Styles & Materials</li>
+                        <li>Focus on Customer Satisfaction</li>
+                        <li>Serving San Bernardino & Surrounding Areas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Types of Blinds Section -->
-    <section id="blinds-types">
-        <h2>Our Awesome Blinds Styles</h2>
-        <p>We offer a variety of blinds to fit any home in San Bernardino. Here are some popular choices:</p>
-        <ul>
-            <li><strong>Wooden Blinds</strong>: These give a warm, natural look, perfect for living rooms or home offices. Choose light or dark wood to match your furniture.</li>
-            <li><strong>Vertical Blinds</strong>: Great for big windows or sliding glass doors, these blinds are easy to use and add a sleek, modern vibe.</li>
-            <li><strong>Roller Blinds</strong>: These roll up neatly and come in tons of colors, making them awesome for any room.</li>
-            <li><strong>Cordless Blinds</strong>: Safe for kids and pets, our <a href="https://galleryshuttersinc.com/blinds/">cordless blinds</a> are super easy to lift and lower without cords.</li>
-        </ul>
-        <p>Every blind is custom-made, so you can pick the perfect color, size, and style. For example, Mia from Rancho Cucamonga got motorized roller blinds for her bedroom. She loves controlling them with a remote, and they make her room look so cool!</p>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Window Treatment Services</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We provide a full range of custom interior solutions designed to improve the look, comfort, and privacy of your home. Each option is crafted to enhance your space, guide natural light the way you prefer, and bring a polished, cohesive feel to every room.</p>
+            <div class="citations-grid">
+                <div class="citation-item">
+                    <h3>Interior Plantation Shutters</h3>
+                    <p>A classic choice that blends beauty with energy efficiency. These shutters bring timeless style to any room while improving comfort and control over natural light.</p>
+                </div>
+                <div class="citation-item">
+                    <h3>Custom Window Blinds</h3>
+                    <p>From Venetian designs to modern finishes, choose the perfect blind to shape your lighting, enhance privacy, and match the personality of your home.</p>
+                </div>
+                <div class="citation-item">
+                    <h3>Door & Patio Shutters</h3>
+                    <p>Made for French doors, sliding doors, and patio entries, these shutters give you privacy and durability without losing the clean, stylish look you want.</p>
+                </div>
+                <div class="citation-item">
+                    <h3>Closet Shutters</h3>
+                    <p>A refined alternative to standard closet doors, offering smooth airflow and a clean, elegant appearance that elevates any bedroom or storage space.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits">
-        <h2>Why Blinds Are Perfect for Your Home</h2>
-        <p>Blinds do more than just cover your windows. Here’s why San Bernardino families love them:</p>
-        <ul>
-            <li><strong>Control Light and Privacy</strong>: Open the blinds for sunlight or close them for a private, cozy space. It’s super easy to adjust.</li>
-            <li><strong>Save Energy</strong>: San Bernardino summers can get hot! Blinds block heat to keep your home cool, saving money on your energy bills.</li>
-            <li><strong>Add Style</strong>: Whether your home is modern or traditional, blinds make your windows pop with style.</li>
-            <li><strong>Easy to Use</strong>: With cordless or motorized options, our blinds are simple for anyone to operate.</li>
-            <li><strong>Low Maintenance</strong>: Just wipe them down, and they’ll stay looking fresh!</li>
-        </ul>
-        <p>Take Carlos from Ontario, for example. He got vertical blinds for his sliding glass door. He says they’re easy to use and make his living room look modern and bright!</p>
+    <!-- Citations Section -->
+    <section id="citations">
+        <div class="container">
+            <h2>Find Our Online Profiles & Citations</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">As a long standing local business, Gallery Shutters is featured on several trusted directories and platforms. These listings make it easy for homeowners to find reliable information, check our reputation, and feel confident when choosing us for their custom shutter and window treatment needs.</p>
+            <div class="citations-grid">
+                <!-- All Citations Provided -->
+                <div class="citation-item">
+                    <a href="https://www.hotfrog.com/company/a284de1cb6bb5cdd8688711b5fc6442c/gallery-shutters/san-bernardino/home-improvement-centers" target="_blank">Gallery Shutters on Hotfrog</a>
+                    <div class="citation-platform">Home Improvement Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://1businessworld.com/company/gallery-shutters/" target="_blank">Gallery Shutters on 1BusinessWorld</a>
+                    <div class="citation-platform">Business Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://us.enrollbusiness.com/BusinessProfile/7501841/Gallery%20Shutters" target="_blank">Gallery Shutters on EnrollBusiness</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.a-zbusinessfinder.com/business-directory/Gallery-Shutters-San-Bernardino-California-USA/34348324/" target="_blank">Gallery Shutters on A-Z Business Finder</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.find-us-here.com/businesses/Gallery-Shutters-San-Bernardino-California-USA/34348335/" target="_blank">Gallery Shutters on Find-Us-Here</a>
+                    <div class="citation-platform">Local Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.fastexpert.com/pros-windowtreatmentstore/gallery-shutters-116253/" target="_blank">Gallery Shutters on FastExpert</a>
+                    <div class="citation-platform">Service Professional Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.apsense.com/user/timmcnulty990" target="_blank">Gallery Shutters on APSense</a>
+                    <div class="citation-platform">Business Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.provenexpert.com/gallery-shutters/" target="_blank">Gallery Shutters on ProvenExpert</a>
+                    <div class="citation-platform">Review & Ratings Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.tupalo.co/san-bernardino-california/gallery-shutters-san-bernardino" target="_blank">Gallery Shutters on Tupalo</a>
+                    <div class="citation-platform">Local Business Map</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.callupcontact.com/b/businessprofile/Gallery_Shutters/9777132" target="_blank">Gallery Shutters on CallUpContact</a>
+                    <div class="citation-platform">Contact Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="http://www.askmap.net/location/7521203/usa/gallery-shutters" target="_blank">Gallery Shutters on AskMap</a>
+                    <div class="citation-platform">Business Location Map</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.zeemaps.com/map/nyzto?group=6855174&location=San%20Bernardino%2C%20CA%2C%20USA%20(San%20Bernardino%20County)" target="_blank">Gallery Shutters on ZeeMaps</a>
+                    <div class="citation-platform">Interactive Business Map</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.dealerbaba.com/suppliers/others/gallery-shutters.html" target="_blank">Gallery Shutters on DealerBaba</a>
+                    <div class="citation-platform">B2B Supplier Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.startus.cc/company/gallery-shutters" target="_blank">Gallery Shutters on StartUs</a>
+                    <div class="citation-platform">Company Discovery Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://bizidex.com/en/gallery-shutters-window-treatments-784696" target="_blank">Gallery Shutters on BizIndex</a>
+                    <div class="citation-platform">Business Listing Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.classifiedads.com/home_services_stores/f7d2m2hcc3dd1" target="_blank">Gallery Shutters on ClassifiedAds</a>
+                    <div class="citation-platform">Classified Ads Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.bunity.com/-5cfa0998-3816-453b-a9fa-4c3623ea7746" target="_blank">Gallery Shutters on Bunity</a>
+                    <div class="citation-platform">Business Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.homeservice.contractors/united-states/san-bernardino/gallery-shutters" target="_blank">Gallery Shutters on HomeService Contractors</a>
+                    <div class="citation-platform">Contractor Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://FreeWebAds.us/453/posts/3/27/1747912.html" target="_blank">Gallery Shutters on FreeWebAds</a>
+                    <div class="citation-platform">Advertising Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.blinx.biz/gallery-shutters" target="_blank">Gallery Shutters on Blinx</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.brownbook.net/business/54393646/gallery-shutters" target="_blank">Gallery Shutters on Brownbook</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.1stopstartup.com/san-bernardino-ca/home-improvements-service/gallery-shutters" target="_blank">Gallery Shutters on 1StopStartup</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.freelistingusa.com/listings/gallery-shutters" target="_blank">Gallery Shutters on FreeListingUSA</a>
+                    <div class="citation-platform">US Business Listings</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://viewer.mapme.com/c1e2f10e-c51c-43c0-974f-7cc01617a6fb" target="_blank">Gallery Shutters on MapMe</a>
+                    <div class="citation-platform">Interactive Map</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://mapfling.com/qr5ykmb" target="_blank">Gallery Shutters on MapFling</a>
+                    <div class="citation-platform">Location Sharing Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.n49.com/biz/6885150/gallery-shutters-ca-san-bernardino-1417-s-gage-st/" target="_blank">Gallery Shutters on N49</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.openstreetmap.org/user/Gallery%20Shutters" target="_blank">Gallery Shutters on OpenStreetMap</a>
+                    <div class="citation-platform">Collaborative Map Project</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.houzz.com/pro/ed-harber81/gallery-shutters" target="_blank">Gallery Shutters on Houzz</a>
+                    <div class="citation-platform">Home Design & Renovation Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://trueen.com/business/listing/gallery-shutters/645518" target="_blank">Gallery Shutters on Trueen</a>
+                    <div class="citation-platform">Local Business Listing</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.expatriates.com/cls/61473603.html?preview" target="_blank">Gallery Shutters on Expatriates</a>
+                    <div class="citation-platform">Classifieds Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.scribblemaps.com/maps/view/Gallery-Shutters/jGCkAOoQWs" target="_blank">Gallery Shutters on ScribbleMaps</a>
+                    <div class="citation-platform">Custom Map Creation</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://yandex.com/maps/org/gallery_shutters/192761115909/?ll=-117.294527%2C34.148450&utm_campaign=941672&utm_content=feedback_maps&utm_medium=email&utm_source=sender&utm_term=org&z=12" target="_blank">Gallery Shutters on Yandex Maps</a>
+                    <div class="citation-platform">Russian Map Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.bizcommunity.com/Company/GalleryShutters" target="_blank">Gallery Shutters on BizCommunity</a>
+                    <div class="citation-platform">Business News & Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.topgoogle.com/listing/gallery-shutters/" target="_blank">Gallery Shutters on TopGoogle</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.dennisdemo.com/united-states/san-bernardino/home-services/gallery-shutters" target="_blank">Gallery Shutters on DennisDemo</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.addonbiz.com/listing/1417-s-gage-st-san-bernardino-ca-92408-united-states-gallery-shutters/" target="_blank">Gallery Shutters on AddonBiz</a>
+                    <div class="citation-platform">Business Listing Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.muslimyellowpages.com/san-bernardino/home-improvement/gallery-shutters" target="_blank">Gallery Shutters on Muslim Yellow Pages</a>
+                    <div class="citation-platform">Specialized Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.buildzoom.com/contractor/gallery-shutters" target="_blank">Gallery Shutters on BuildZoom</a>
+                    <div class="citation-platform">Contractor Verification Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.classifiedads.com/home_services_stores/4ccc45mdt3dxd" target="_blank">Gallery Shutters on ClassifiedAds</a>
+                    <div class="citation-platform">Classified Ads Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.bark.com/en/us/company/gallery-shutters/9XRPdz/" target="_blank">Gallery Shutters on Bark</a>
+                    <div class="citation-platform">Service Professional Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.earthmom.org/san-bernardino/contractors/gallery-shutters" target="_blank">Gallery Shutters on EarthMom</a>
+                    <div class="citation-platform">Local Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://vymaps.com/US/Gallery-Shutters-VN135422/?id_new=b5416c9a6234e5033b3046cdb9afba73" target="_blank">Gallery Shutters on Vymaps</a>
+                    <div class="citation-platform">Mapping Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.choice.directory/san-bernardino/blinds-supply-and-fitting/gallery-shutters" target="_blank">Gallery Shutters on Choice Directory</a>
+                    <div class="citation-platform">Specialized Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://california.bizhwy.com/gallery-shutters-id135317.php" target="_blank">Gallery Shutters on California BizHwy</a>
+                    <div class="citation-platform">State Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://patch.com/california/san-bernardino-ca/business/listing/554645/gallery-shutters" target="_blank">Gallery Shutters on Patch</a>
+                    <div class="citation-platform">Local News & Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://pro.porch.com/san-bernardino-ca/window-contractors/gallery-shutters-167482166/pp" target="_blank">Gallery Shutters on Porch Pro</a>
+                    <div class="citation-platform">Home Professional Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://issuu.com/galleryshuttersinc" target="_blank">Gallery Shutters on Issuu</a>
+                    <div class="citation-platform">Digital Publishing Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.locanto.com/sanbernardino/ID_7900172576/Gallery-Shutters.html" target="_blank">Gallery Shutters on Locanto</a>
+                    <div class="citation-platform">Classified Ads Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.tuugo.us/listing/gallery-shutters/" target="_blank">Gallery Shutters on Tuugo US</a>
+                    <div class="citation-platform">Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.sbdpro.com/business/gallery-shutters" target="_blank">Gallery Shutters on SBD Pro</a>
+                    <div class="citation-platform">Small Business Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://network.procore.com/p/gallery-shutters-san-bernardino" target="_blank">Gallery Shutters on Procore Network</a>
+                    <div class="citation-platform">Construction Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://about.me/galleryshutters" target="_blank">Gallery Shutters on About.me</a>
+                    <div class="citation-platform">Personal Profile Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://addyp.com/listing/california/san-bernardino-104/find-top-best-home-services-near-me-2/gallery-shutters" target="_blank">Gallery Shutters on Addyp</a>
+                    <div class="citation-platform">Local Service Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.allbusiness.com/company-profile/gallery-shutters" target="_blank">Gallery Shutters on AllBusiness</a>
+                    <div class="citation-platform">Business Resource Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.trepup.com/store/galleryshuttersblind/profile" target="_blank">Gallery Shutters on Trepup</a>
+                    <div class="citation-platform">Business Social Network</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.sitelike.org/similar/galleryshuttersinc.com/" target="_blank">Gallery Shutters on SiteLike</a>
+                    <div class="citation-platform">Similar Sites Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://us.polomap.com/san-bernardino/69400" target="_blank">Gallery Shutters on PoloMap</a>
+                    <div class="citation-platform">Mapping Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.owler.com/company/galleryshuttersinc" target="_blank">Gallery Shutters on Owler</a>
+                    <div class="citation-platform">Company Information Platform</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.linkcentre.com/profile/galleryshutters" target="_blank">Gallery Shutters on LinkCentre</a>
+                    <div class="citation-platform">Business Profile Directory</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.marketlister.com/biz/gallery-shutters" target="_blank">Gallery Shutters on MarketLister</a>
+                    <div class="citation-platform">Business Listing Service</div>
+                </div>
+                <div class="citation-item">
+                    <a href="https://www.biopage.com/galleryshutters" target="_blank">Gallery Shutters on BioPage</a>
+                    <div class="citation-platform">Profile Creation Platform</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-choose">
-        <h2>Why Choose Gallery Shutters for Blinds?</h2>
-        <p>We’re the top choice for custom blinds in San Bernardino. Here’s what makes us special:</p>
-        <ul>
-            <li><strong>Affordable Prices</strong>: We make our blinds in our own factory, so you get great quality at a low cost.</li>
-            <li><strong>Free Home Visits</strong>: We’ll come to your house, measure your windows, and give you a free quote with no hassle.</li>
-            <li><strong>Fast Delivery</strong>: Get your custom blinds in just one week, perfectly installed by our team.</li>
-            <li><strong>Custom Designs</strong>: Pick from tons of colors, materials, and styles, including cordless and motorized options.</li>
-            <li><strong>Loved by Locals</strong>: San Bernardino homeowners trust us for our friendly service and awesome blinds.</li>
-        </ul>
-        <p>With over 30 years of experience, we know how to create blinds you’ll love for years to come.</p>
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2>Expert Shutter & Blind Insights</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Explore our helpful resources to learn how to choose, maintain, and style the right window treatments for your home in San Bernardino. Each guide is designed to give you clear, practical insights so you can create a look that feels comfortable, polished, and perfectly matched to your space.</p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/plantation-shutters-for-patio-doors/" target="_blank">Enhance Your Patio Doors with Plantation Shutters</a></h3>
+                        <p>Discover how custom plantation shutters can provide the perfect blend of style, light control, and durability for your patio doors.</p>
+                        <a href="https://galleryshuttersinc.com/plantation-shutters-for-patio-doors/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/split-tilt-plantation-shutters/" target="_blank">The Ultimate Guide to Split Tilt Plantation Shutters</a></h3>
+                        <p>Learn about the functionality and design benefits of split tilt shutters, ideal for windows with multiple panels or specific operational needs.</p>
+                        <a href="https://galleryshuttersinc.com/split-tilt-plantation-shutters/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/house-and-shutter-color-combinations/" target="_blank">Choosing the Right Shutter Color for Your Home's Exterior</a></h3>
+                        <p>Get inspired with our guide to pairing your home's exterior paint with the perfect shutter colors to boost curb appeal.</p>
+                        <a href="https://galleryshuttersinc.com/house-and-shutter-color-combinations/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/types-of-shutters-interior/" target="_blank">Exploring the Different Types of Interior Shutters</a></h3>
+                        <p>From traditional solid panels to modern café-style, find out which type of interior shutter best suits your home's decor and functional requirements.</p>
+                        <a href="https://galleryshuttersinc.com/types-of-shutters-interior/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/what-are-venetian-blinds/" target="_blank">What Are Venetian Blinds? A Timeless Window Solution</a></h3>
+                        <p>Dive into the history, benefits, and versatility of Venetian blinds, a classic and practical choice for any room.</p>
+                        <a href="https://galleryshuttersinc.com/what-are-venetian-blinds/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-content">
+                        <h3><a href="https://galleryshuttersinc.com/can-people-see-through-blinds/" target="_blank">Privacy Explained: Can People See Through Your Blinds?</a></h3>
+                        <p>Understand the factors that affect privacy with window blinds and how to choose the right style to ensure your comfort and security.</p>
+                        <a href="https://galleryshuttersinc.com/can-people-see-through-blinds/" target="_blank" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Locations Section -->
-    <section id="locations">
-        <h2>Where We Serve</h2>
-        <p>We bring custom blinds to San Bernardino and nearby areas. Here’s where you can find us:</p>
-        <ul>
-            <li><strong>San Bernardino</strong>: Our hometown, where we make homes beautiful with custom blinds.</li>
-            <li><strong>Riverside</strong>: From big houses to small apartments, we’ve got blinds for everyone.</li>
-            <li><strong>Fontana</strong>: Affordable, stylish blinds for any budget.</li>
-            <li><strong>Moreno Valley</strong>: Keep your home cool and private with our designs.</li>
-            <li><strong>Rancho Cucamonga</strong>: Sleek blinds for upscale homes.</li>
-            <li><strong>Ontario, Anaheim, Santa Ana</strong>: We serve all of Southern California!</li>
-        </ul>
-        <p>Wherever you are, we’ll bring our top-quality blinds and friendly service to you.</p>
-    </section>
-
-    <!-- Map Section -->
-    <section id="map">
-        <h2>Visit Us in San Bernardino</h2>
-        <p>Stop by at 1417 S Gage St, San Bernardino, CA 92408, or let us visit you for a free estimate!</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d105752.22772227829!2d-117.264772!3d34.07574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcab622ae6bd5b%3A0xf63f5cb5f8feec33!2sGallery%20Shutters!5e0!3m2!1sen!2us!4v1758794152898!5m2!1sen!2us" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Gallery Shutters Today</h2>
-        <p>Ready to get amazing blinds for your home? Reach out to us now!</p>
-        <p><strong>Phone</strong>: <a href="tel:8004628777">(800) 462-8777</a><br>
-        <strong>Email</strong>: <a href="mailto:info@galleryshuttersinc.com">info@galleryshuttersinc.com</a><br>
-        <strong>Address</strong>: 1417 S Gage St, San Bernardino, CA 92408</p>
-        <p>Connect with us online:</p>
-        <ul>
-            <li><a href="https://share.google/RwyAysMmyoZlPPRW7">Google Business Profile</a></li>
-            <li><a href="https://www.facebook.com/p/Gallery-Shutters-Inc-100068863140272/">Facebook</a></li>
-            <li><a href="https://www.yelp.com/biz/gallery-shutters-san-bernardino">Yelp</a></li>
-            <li><a href="https://nextdoor.com/pages/gallery-shutters-san-bernardino-ca/">Nextdoor</a></li>
-        </ul>
-        <a href="#contact" class="button">Request Your Free Estimate</a>
-    </section>
-
-    <!-- Copyright Section -->
-    <footer id="copyright">
-        <p>© 2025 Gallery Shutters. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="https://galleryshuttersinc.com/">
+                        <img src="https://galleryshuttersinc.com/wp-content/uploads/2024/06/Asset-11.png" alt="Gallery Shutters" class="footer-logo">
+                    </a>
+                    <p>Your trusted partner for custom window shutters and blinds in San Bernardino, CA.</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><strong>Address:</strong><br> <a href="https://maps.app.goo.gl/8RF9iR9ENssxCTVHA">1417 S Gage St<br>San Bernardino, CA 92408</a></p>
+                    <p><strong>Phone:</strong><br> <a href="tel:9097961788">(909) 796-1788</a></p>
+                    <p><strong>Email:</strong><br> <a href="mailto:tim.galleryshutters@gmail.com">tim.galleryshutters@gmail.com</a></p>
+                    <p><strong>GMB:</strong><br> <a href="https://share.google/RwyAysMmyoZlPPRW7" target="_blank">View our Google Business Profile</a></p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#about" style="color: var(--color-cream); text-decoration: none;">About Us</a></li>
+                        <li><a href="#services" style="color: var(--color-cream); text-decoration: none;">Our Services</a></li>
+                        <li><a href="#citations" style="color: var(--color-cream); text-decoration: none;">Our Profiles</a></li>
+                        <li><a href="#blog" style="color: var(--color-cream); text-decoration: none;">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <script>document.write(new Date().getFullYear())</script> Gallery Shutters. All rights reserved.
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mainNav = document.getElementById('mainNav');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
